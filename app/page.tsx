@@ -66,16 +66,16 @@ export default function Home() {
         </div>
       </Reveal>
 
-      <div className='flex w-screen h-full flex-col bg-[#f3e4f0] gap-2.5 md:gap-[100px]'>
+      <div className='flex w-screen h-full flex-col bg-[#f3e4f0] gap-2.5 md:gap-[30px]'>
         
         {/* About Section */}
-        <div id="about" className="flex w-full h-screen bg-[#f3e4f0] text-[#28082c] justify-center items-center">
+        <div id="about" className="flex w-full h-screen bg-[#f3e4f0] text-[#5c0d67] justify-center items-center">
           <div className="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12">
             {/* Left Image */}
             <Reveal>
               <div className="w-full h-full shrink-0">
                 <Image
-                  src="/insight demoresources/67ddf0c6b9bcdeb600fda65d_PANEL8-right-side-image-image.jpg"
+                  src="/WhatsApp Image 2025-11-29 at 14.05.00_6958caa0.jpg"
                   alt="Creative Emmy Team"
                   width={400}
                   height={600}
@@ -85,7 +85,7 @@ export default function Home() {
             </Reveal>
 
             {/* Right Text */}
-            <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-6">
+            <div className="w-full md:w-full flex flex-col gap-4 md:gap-6">
               <Reveal>
                 <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-[#5c0d67] font-bold font-museo">
                   About Creative Emmy
@@ -99,7 +99,7 @@ export default function Home() {
               </Reveal>
 
               <Reveal>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed md:leading-loose">
+                <p className="text-base sm:text-xl md:text-2xl leading-relaxed md:leading-loose">
                   Creative Emmy is a leading design studio specializing in delivering high-quality
                   branding, print, and digital solutions. Our mission is to bring your vision to life
                   with creativity, precision, and innovation. From logos and marketing materials to
@@ -143,7 +143,7 @@ export default function Home() {
                   href={`https://wa.me/${YOUR_NUMBER}?text=Hello%20Creative%20Emmy!%20I%20have%20a%20project%20in%20mind.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#f3e4f0] text-[#5c0d67] px-6 py-3 md:px-8 md:py-4 cursor-pointer rounded-full font-semibold hover:bg-gray-200 transition-all duration-300"
+                  className="bg-[#f3e4f0] text-[#5c0d67] px-6 py-3 md:px-8 md:py-4 text-lg sm:text-xl cursor-pointer rounded-full font-semibold hover:bg-gray-200 transition-all duration-300"
                 >
                   Contact Us
                 </a>

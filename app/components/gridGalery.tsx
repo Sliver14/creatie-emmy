@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // ------------------------------------
 // Types
@@ -16,14 +17,13 @@ interface GalleryImage {
 // Image Data
 // ------------------------------------
 const images: GalleryImage[] = [
-  { src: "/insight demoresources/67858a93f83a54737c833bb7_img_services1-ezgif.com-avif-to-jpg-converter.jpg", category: "branding" },
-  { src: "/insight demoresources/67c8aaf35fa470c9471c85ba_67c49ff00bb6ac91e819f42e_Zight20at20PM-ezgif.com-avif-to-jpg-converter.jpg", category: "graphics" },
-  { src: "/insight demoresources/67c8aaf35fa470c9471c8604_67c49910213fd2040fc872e4_Air-Chesky1.jpg", category: "logo" },
-  { src: "/insight demoresources/67dc5150b12bfae57e5874eb_67db7e744ac165dadd3cc371_Airbnb-img-6.jpeg", category: "branding" },
-  { src: "/insight demoresources/67dc5150b12bfae57e5874ee_67db7e713c696cb713af8d50_Airbnb-img-5.jpeg", category: "graphics" },
-  { src: "/insight demoresources/67c8aaf35fa470c9471c8604_67c49910213fd2040fc872e4_Air-Chesky1.jpg", category: "logo" },
-  { src: "/insight demoresources/67c8aaf35fa470c9471c8604_67c49910213fd2040fc872e4_Air-Chesky1.jpg", category: "branding" },
-  { src: "/insight demoresources/67c8aaf35fa470c9471c8604_67c49910213fd2040fc872e4_Air-Chesky1.jpg", category: "graphics" },
+  { src: "/emmy_work/IMG-20251129-WA0004.jpg", category: "branding" },
+  { src: "/emmy_work/IMG-20251129-WA0005.jpg", category: "graphics" },
+  { src: "/emmy_work/IMG-20251129-WA0006.jpg", category: "logo" },
+  { src: "/emmy_work/IMG-20251129-WA0007.jpg", category: "branding" },
+  { src: "/emmy_work/IMG-20251129-WA0008.jpg", category: "graphics" },
+  { src: "/emmy_work/IMG-20251129-WA0009.jpg", category: "logo" },
+  { src: "/emmy_work/IMG-20251129-WA0010.jpg", category: "branding" },
 ];
 
 // ------------------------------------
@@ -42,23 +42,24 @@ export default function GallerySection() {
 
   const filteredImages =
     active === "all" ? images : images.filter((img) => img.category === active);
+  const router = useRouter();
 
   return (
-    <div className="w-full bg-[#f3e4f0] py-12 sm:py-16 md:py-20">
+    <div className="flex w-full h-full flex-col gap-20 bg-[#f3e4f0] py-12 sm:py-16 md:py-20">
       {/* Title */}
-      <div className="text-center mb-8 sm:mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-museo text-[#5c0d67]">
-          Projects
+      <div className="text-center">
+        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-museo text-[#5c0d67]">
+          Featured Projects
         </h2>
       </div>
 
       {/* Category Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all
+            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-lg sm:text-xl font-medium transition-all
               ${
                 active === cat
                   ? "bg-[#5c0d67] text-[#f3e4f0]"
@@ -92,6 +93,15 @@ export default function GallerySection() {
           </motion.div>
         ))}
       </div>
+
+      <div className="flex items-center justify-center ">
+        <div 
+          onClick={() => router.push("/projects")} 
+          className="bg-[#5c0d67] w-auto text-[#f3e4f0] px-6 py-3 md:px-8 md:py-4 text-lg sm:text-xl cursor-pointer rounded-full font-semibold hover:bg-[#5c0d67]/90 transition-all duration-300">
+          View all Projects
+        </div>
+      </div>
+      
     </div>
   );
 }
