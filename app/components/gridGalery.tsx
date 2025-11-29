@@ -24,6 +24,8 @@ const images: GalleryImage[] = [
   { src: "/emmy_work/IMG-20251129-WA0008.jpg", category: "graphics" },
   { src: "/emmy_work/IMG-20251129-WA0009.jpg", category: "logo" },
   { src: "/emmy_work/IMG-20251129-WA0010.jpg", category: "branding" },
+  { src: "/emmy_work/FOOD PROJECT.png", category: "UI/UX" },
+  { src: "/emmy_work/WhatsApp Image 2025-11-29 at 14.23.51_a606c516.jpg", category: "UI/UX" },
 ];
 
 // ------------------------------------

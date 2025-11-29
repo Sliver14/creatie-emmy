@@ -67,6 +67,9 @@ const projects: ProjectImage[] = [
   { src: "/emmy_work/IMG-20251129-WA0048.jpg", category: "logo" },
   { src: "/emmy_work/IMG-20251129-WA0049.jpg", category: "branding" },
   { src: "/emmy_work/IMG-20251129-WA0050.jpg", category: "graphics" },
+  { src: "/emmy_work/FOOD PROJECT.png", category: "UI/UX" },
+  { src: "/emmy_work/WhatsApp Image 2025-11-29 at 14.22.58_40e03ccf.jpg", category: "UI/UX" },
+  { src: "/emmy_work/WhatsApp Image 2025-11-29 at 14.18.08_545cc24a.jpg", category: "UI/UX" },
 ];
 
 
