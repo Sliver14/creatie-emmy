@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 // ------------------------------------
 interface GalleryImage {
   src: string;
-  category: "branding" | "graphics" | "logo";
+  category: "branding" | "graphics" | "logo" | "UI/UX";
 }
 
 // ------------------------------------
@@ -34,10 +34,10 @@ const imageVariants: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0, 0, 0.58, 1] } },
 };
 
-type Category = "all" | "branding" | "graphics" | "logo";
+type Category = "all" | "branding" | "graphics" | "logo" | "UI/UX";
 
 export default function GallerySection() {
-  const categories: Category[] = ["all", "logo", "graphics", "branding"];
+  const categories: Category[] = ["all", "logo", "graphics", "branding", "UI/UX"];
   const [active, setActive] = useState<Category>("all");
 
   const filteredImages =
@@ -46,7 +46,9 @@ export default function GallerySection() {
 
   return (
     <div className="flex w-full h-full flex-col gap-20 bg-[#f3e4f0] py-12 sm:py-16 md:py-20">
-      {/* Title */}
+      
+      <div className="flex flex-col gap-10">
+        {/* Title */}
       <div className="text-center">
         <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-museo text-[#5c0d67]">
           Featured Projects
@@ -70,9 +72,12 @@ export default function GallerySection() {
           </button>
         ))}
       </div>
+      </div>
+      
+
 
       {/* Masonry Grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 px-4 sm:px-8 md:px-10">
+      <div className="columns-2 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 px-4 sm:px-8 md:px-10">
         {filteredImages.map((item, index) => (
           <motion.div
             key={index}

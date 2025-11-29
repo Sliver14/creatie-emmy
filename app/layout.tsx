@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+// import Providers from "./providers";
 
 // Custom Fonts
 const erbar = localFont({
@@ -93,7 +94,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${erbar.variable} ${museo.variable} antialiased`}>
-        {children}
+        {/* <Providers> */}
+          {children}
+        {/* </Providers> */}
+       
       </body>
     </html>
   );

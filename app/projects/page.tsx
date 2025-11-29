@@ -86,25 +86,25 @@ export default function ProjectsPage() {
     active === "all" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <main className="w-full min-h-screen bg-[#f3e4f0] py-16 md:py-20 flex flex-col gap-16">
+    <main className="w-screen min-h-screen bg-[#f3e4f0] pt-32 md:pt-38 flex flex-col gap-16">
       <Header/>
       {/* ------------------ TITLE ------------------ */}
       <section className="text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-museo text-[#5c0d67]">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-museo text-[#5c0d67]">
           Our Projects
         </h1>
-        <p className="mt-4 text-lg sm:text-xl text-[#5c0d67]/80 font-erbar">
+        <p className="mt-4 text-lg sm:text-xl font-medium text-[#5c0d67]/80 font-erbar">
           Explore our collection of branding, graphics, and logo projects.
         </p>
       </section>
 
       {/* ------------------ CATEGORIES ------------------ */}
-      <section className="flex flex-wrap justify-center gap-4 px-4">
+      <section className="flex flex-wrap justify-center gap-4 sm:gap-6">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-lg sm:text-xl font-medium transition-all duration-300
+            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-lg sm:text-xl font-medium transition-all
               ${
                 active === cat
                   ? "bg-[#5c0d67] text-[#f3e4f0] shadow-lg"
@@ -118,7 +118,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* ------------------ IMAGE GRID (MASONRY EFFECT) ------------------ */}
-      <section className="columns-1 sm:columns-2 lg:columns-3 gap-4 px-4 sm:px-8 md:px-12">
+      <section className="columns-2 sm:columns-2 lg:columns-3 gap-4 px-4 sm:px-8 md:px-12">
         {filtered.map((project, index) => (
           <motion.div
             key={index}
@@ -144,9 +144,9 @@ export default function ProjectsPage() {
       <div className="flex items-center justify-center pb-10">
         <a
           href="/contact"
-          className="bg-[#5c0d67] text-[#f3e4f0] px-8 py-4 text-xl rounded-full font-semibold hover:bg-[#5c0d67]/90 transition-all duration-300 shadow-lg"
+          className="bg-[#5c0d67] w-auto text-[#f3e4f0] px-6 py-3 md:px-8 md:py-4 text-lg sm:text-xl cursor-pointer rounded-full font-semibold hover:bg-[#5c0d67]/90 transition-all duration-300"
         >
-          Start Your Project →
+          Start Your Project
         </a>
       </div>
     </main>

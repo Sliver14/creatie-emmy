@@ -41,35 +41,39 @@ export default function Home() {
 
 
       <Reveal>
-        <div className="flex relative font-extralight justify-center items-center h-screen w-full">
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-chevron-down"
-            animate={{ y: [0, 10, 0] }}          // animate up & down
-            transition={{
-              duration: 1.5,                     // total animation time
-              repeat: Infinity,                  // loop forever
-              repeatType: "loop",                // smooth loop
-              ease: "easeInOut"                  // natural movement
-            }}
-          >
-            <path d="m6 9 6 6 6-6" />
-          </motion.svg>
-        </div>
+        
+          <div className="flex relative font-extralight justify-center items-center h-screen w-full">
+           <a href="#about" className="scroll-smooth">
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-chevron-down"
+              animate={{ y: [0, 10, 0] }}          // animate up & down
+              transition={{
+                duration: 1.5,                     // total animation time
+                repeat: Infinity,                  // loop forever
+                repeatType: "loop",                // smooth loop
+                ease: "easeInOut"                  // natural movement
+              }}
+            >
+              <path d="m6 9 6 6 6-6" />
+            </motion.svg>
+          </a>
+          </div>
+        
       </Reveal>
 
       <div className='flex w-screen h-full flex-col bg-[#f3e4f0] gap-2.5 md:gap-[30px]'>
         
         {/* About Section */}
-        <div id="about" className="flex w-full h-screen bg-[#f3e4f0] text-[#5c0d67] justify-center items-center">
+        <div id="about" className="flex w-full h-full pt-20 bg-[#f3e4f0] text-[#5c0d67] justify-center items-center">
           <div className="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12">
             {/* Left Image */}
             <Reveal>
@@ -88,7 +92,7 @@ export default function Home() {
             <div className="w-full md:w-full flex flex-col gap-4 md:gap-6">
               <Reveal>
                 <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-[#5c0d67] font-bold font-museo">
-                  About Creative Emmy
+                  Creative Emmy
                 </h2>
               </Reveal>
 
@@ -99,7 +103,7 @@ export default function Home() {
               </Reveal>
 
               <Reveal>
-                <p className="text-base sm:text-xl md:text-2xl leading-relaxed md:leading-loose">
+                <p className="text-xl sm:text-xl md:text-2xl leading-6 md:leading-8">
                   Creative Emmy is a leading design studio specializing in delivering high-quality
                   branding, print, and digital solutions. Our mission is to bring your vision to life
                   with creativity, precision, and innovation. From logos and marketing materials to

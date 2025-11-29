@@ -120,7 +120,7 @@ export default function SectionIndicator({
           key={i}
           onClick={() => scrollToSection(i)}
           className={`
-            w-3 h-3 lg:w-4 lg:h-4 rounded-full border-2 transition-all
+            w-2 h-2 lg:w-3 lg:h-3 rounded-full border-2 transition-all
             ${active === i ? "scale-125" : "scale-100"}
             ${isLight ? "border-white" : "border-[#ff8740]"}
             ${active === i ? (isLight ? "bg-white" : "bg-[#ff8740]") : "bg-transparent"}
