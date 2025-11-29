@@ -83,7 +83,7 @@ export default function Navbar() {
             key={item}
             onClick={() => scrollToSection(item)}
             className="relative text-[#f3e4f0] text-lg font-medium transition-colors duration-300 hover:text-[#ff8740] 
-                       after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#ff8740] 
+                       after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff8740] 
                        after:transition-all after:duration-300 hover:after:w-full"
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -120,7 +120,7 @@ export default function Navbar() {
         initial={false}
         animate={open ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="absolute top-24 left-0 w-full bg-[#28082c] md:hidden overflow-hidden"
+        className="absolute top-12 left-0 w-full bg-[#28082c] md:hidden overflow-hidden"
       >
         <div className="flex flex-col items-center py-6 space-y-6">
           {links.map((item) => (
