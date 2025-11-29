@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import GridGallery from './components/gridGalery';
 import HeaderNav from './components/headernav';
 import SectionIndicator from './components/sectionindicator';
+import Footer from './components/footer';
 
 export default function Home() {
   const YOUR_NUMBER = "2348107419089"; // Replace with your actual number
@@ -158,11 +159,7 @@ export default function Home() {
 
 
           {/* Footer */}
-          <div>
-            <div className='flex justify-center items-center h-20 w-full bg-[#28082c] text-[#f3e4f0]'>
-              <p className='text-base font-light'>&copy; 2025 Creative Emmy. All rights reserved.</p>
-            </div>
-          </div>
+          <Footer/>
         </div>
     </div>
     </div>

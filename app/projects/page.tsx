@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import Header from "../components/headernav";
 import Reveal from "../components/reveal";
+import Footer from "../components/footer";
 
 // ------------------------------------
 // TYPES
@@ -178,11 +179,7 @@ export default function ProjectsPage() {
 
 
           {/* Footer */}
-          <div>
-            <div className='flex justify-center items-center font-erbar h-20 w-full bg-[#28082c] text-[#f3e4f0]'>
-              <p className='text-base font-light'>&copy; 2025 Creative Emmy. All rights reserved.</p>
-            </div>
-          </div>
+          <Footer/>
         </div>
     </main>
   );
