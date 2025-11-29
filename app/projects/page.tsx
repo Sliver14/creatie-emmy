@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import Header from "../components/headernav";
+import Reveal from "../components/reveal";
 
 // ------------------------------------
 // TYPES
@@ -79,6 +80,7 @@ const imageVariants: Variants = {
 type Category = "all" | "branding" | "graphics" | "logo" | "UI/UX";
 
 export default function ProjectsPage() {
+  const YOUR_NUMBER = "2348107419089";
   const [active, setActive] = useState<Category>("all");
   const categories: Category[] = ["all", "logo", "graphics", "branding", "UI/UX"];
 
@@ -104,7 +106,7 @@ export default function ProjectsPage() {
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-lg sm:text-xl font-medium transition-all
+            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-lg sm:text-xl font-erbar font-medium transition-all
               ${
                 active === cat
                   ? "bg-[#5c0d67] text-[#f3e4f0] shadow-lg"
@@ -141,14 +143,47 @@ export default function ProjectsPage() {
       </section>
 
       {/* ------------------ CTA BUTTON ------------------ */}
-      <div className="flex items-center justify-center pb-10">
-        <a
-          href="/contact"
-          className="bg-[#5c0d67] w-auto text-[#f3e4f0] px-6 py-3 md:px-8 md:py-4 text-lg sm:text-xl cursor-pointer rounded-full font-semibold hover:bg-[#5c0d67]/90 transition-all duration-300"
-        >
-          Start Your Project
-        </a>
-      </div>
+        <div className='flex flex-col'>
+          {/* Contact Us */}
+          <div id='contact' className="w-full bg-[#5c0d67] py-20">
+            <div className="flex flex-col justify-center items-center gap-10 text-center text-[#f3e4f0] max-w-4xl mx-auto px-6 md:px-20">
+              <div>
+                <Reveal>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-museo mb-4 md:mb-6">
+                    Start your project
+                  </h2>
+                </Reveal>
+
+                <Reveal>
+                  <p className="text-lg font-erbar sm:text-xl md:text-2xl mb-6">
+                    Ready to elevate your brand with Creative Emmy? Contact us today to discuss your project and discover how we can bring your vision to life.
+                  </p>
+                </Reveal>
+              </div>
+
+
+              <Reveal>
+                <a
+                  href={`https://wa.me/${YOUR_NUMBER}?text=Hello%20Creative%20Emmy!%20I%20have%20a%20project%20in%20mind.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#f3e4f0] text-[#5c0d67] px-6 py-3 md:px-8 md:py-4 text-lg sm:text-xl cursor-pointer rounded-full hover:bg-gray-200 transition-all duration-300"
+                >
+                  Contact Us
+                </a>
+              </Reveal>
+
+            </div>
+          </div>
+
+
+          {/* Footer */}
+          <div>
+            <div className='flex justify-center items-center font-erbar h-20 w-full bg-[#28082c] text-[#f3e4f0]'>
+              <p className='text-base font-light'>&copy; 2025 Creative Emmy. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
     </main>
   );
 }
