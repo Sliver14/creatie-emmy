@@ -11,13 +11,13 @@ export default function Home() {
   const YOUR_NUMBER = "2348107419089"; // Replace with your actual number
   return (
     <div 
-      className="flex flex-col font-erbar min-h-screen w-screen bg-fixed bg-[#5c0d67] bg-cover bg-position-[center_top]"
+      className="flex flex-col font-erbar min-h-screen w-full overflow-x-hidden bg-fixed bg-[#5c0d67] bg-cover bg-position-[center_top]"
       style={{
         backgroundImage: `url('/download(6).png')`
       }}
     >
       
-    <div className="absolute h-[225vh] w-screen inset-0 bg-black/20"></div> 
+    <div className="absolute h-screen md:h-[225vh] w-full inset-0 bg-black/20"></div> 
     <SectionIndicator sections={["hero", "about", "projects", "contact"]} />
 
 
@@ -42,8 +42,8 @@ export default function Home() {
 
       <Reveal>
         
-          <div className="flex relative font-extralight justify-center items-center h-screen w-full">
-           <a href="#about" className="scroll-smooth">
+          <div className="flex relative font-extralight justify-center items-center h-0 md:h-screen w-full">
+           <a href="#about" className="hidden md:block scroll-smooth">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"
@@ -70,7 +70,7 @@ export default function Home() {
         
       </Reveal>
 
-      <div className='flex w-screen h-full flex-col bg-[#f3e4f0] gap-2.5 md:gap-[30px]'>
+      <div className='flex w-full h-full flex-col bg-[#f3e4f0] gap-2.5 md:gap-[30px]'>
         
         {/* About Section */}
         <div id="about" className="flex w-full h-full pt-20 bg-[#f3e4f0] text-[#5c0d67] justify-center items-center">
