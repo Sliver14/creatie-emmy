@@ -88,7 +88,7 @@ export default function Home() {
           </div>
       </Reveal>
 
-      <div className='flex w-full h-full flex-col bg-[#f3e4f0] gap-0'>
+      <div className='flex w-full h-full flex-col bg-[#f3e4f0] gap-10 md:gap-20'>
         
         {/* About Section */}
         <div id="about" className="flex w-full h-full pt-20 pb-10 md:py-20 bg-[#f3e4f0] text-[#5c0d67] justify-center items-center">

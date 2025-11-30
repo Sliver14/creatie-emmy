@@ -47,7 +47,7 @@ export default function GallerySection() {
   const router = useRouter();
 
   return (
-    <div className="flex w-full h-full flex-col gap-10 md:gap-20 bg-[#f3e4f0] py-12 sm:py-16 md:py-20">
+    <div className="flex w-full h-full flex-col gap-10 md:gap-20 bg-[#f3e4f0] ">
       
       <div className="flex flex-col gap-10">
           {/* Title */}
